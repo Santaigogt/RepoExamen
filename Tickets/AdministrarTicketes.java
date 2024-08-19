@@ -28,6 +28,22 @@ public class AdministrarTicketes {
         this(new LinkedList<>());
     }
 
+    
+    public ticket controladorAtender (TipoTickete tipo){
+        
+        public Queue<ticket> buscarTicketPorTipo(TipoTickete tipo){
+          Queue<ticket> listaTipos;
+         for (Iterator<ticket> it = this.listTickets.iterator(); it.hasNext();) {
+            if (tipo.equals(it.next().getTipo())){
+                  listaTipos = (Queue<ticket>) it;
+                return listaTipos;
+            }
+        }
+        return null;
+            
+    }
+       
+    
     public void AgregarTiket( TipoTickete tipo) {
         ticket ticke = new ticket( tipo);
         listTickets.add(ticke);
@@ -36,7 +52,7 @@ public class AdministrarTicketes {
     public void elimnarTicketPorPsoscion(){
     listTickets.poll();
     }
-        public void elimnarTicket(String numero, TipoTickete tipo){
+    public void elimnarTicket(String numero, TipoTickete tipo){
     listTickets.remove();
      //listTickets.
     }
@@ -50,5 +66,5 @@ public class AdministrarTicketes {
         }
         return null;
             
-        }
     }
+}
