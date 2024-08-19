@@ -8,7 +8,10 @@ package Tickets;
  *
  * @author Student
  */
-public class AdministrarTicketes {
+public enum TipoTickete {
+    Plataformas,
+    cajas,
+    Preferencial,
     
     
     
