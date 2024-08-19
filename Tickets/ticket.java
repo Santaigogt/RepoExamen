@@ -7,27 +7,33 @@ package Tickets;
  * @author Student
  */
 public class ticket {
- 
-    private String numero;
+    
+    private int cont = 1;
+    private int numero;
     private TipoTickete tipo;
 
-    public String getNumero() {
+    /*
+    public int getNumero() {
         return numero;
     }
-
+     */
     public TipoTickete getTipo() {
         return tipo;
     }
 
-    public ticket(String numero, TipoTickete tipo) {
-        this.numero = numero;
+    public ticket(TipoTickete tipo) {
+        this.numero = autoincremental();
         this.tipo = tipo;
     }
 
-    
+    public int autoincremental() {
+        cont++;
+        return cont;
+    }
+
     @Override
     public String toString() {
         return "ticket{" + "numero=" + numero + ", tipo=" + tipo + '}';
     }
-   
+
 }

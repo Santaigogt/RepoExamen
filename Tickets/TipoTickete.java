@@ -10,7 +10,7 @@ package Tickets;
  */
 public enum TipoTickete {
     Plataformas,
-    cajas,
+    Cajas,
     Preferencial,
     
     
